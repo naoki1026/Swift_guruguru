@@ -9,10 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var activityIndicatorView = UIActivityIndicatorView()
+    
+    @IBAction func startActivityIndicator(_ sender: UIButton) {
+        
+        activityIndicatorView.startAnimating()
+        
+    }
+    
+    
+    @IBAction func stopActivityIndicator(_ sender: UIButton) {
+        
+       activityIndicatorView.stopAnimating()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = .lightGray
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .whiteLarge
+        activityIndicatorView.color = . yellow
+        view.addSubview(activityIndicatorView)
+        
     }
 
 
